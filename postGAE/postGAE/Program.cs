@@ -160,11 +160,11 @@ namespace postGAE
                     Console.WriteLine(items[i + 1]);
                     String f  = @"c:\temptemp\" + items[i] + "賽果.htm";
                     String f0 = @"c:\temptemp\" + items[i] + "名單.htm";
-                    if (posturl(items[i + 1], items[i], localhost + items[i] + "賽果.htm"))
+                    if (posturl(items[i + 1], items[i], localhost + items[i] + "賽果.htm",log))
                     {
                         log.Add(f);
                     }
-                    else if (posturl(items[i + 1], items[i], localhost + items[i] + "名單.htm"))
+                    else if (posturl(items[i + 1], items[i], localhost + items[i] + "名單.htm",log))
                     {
                         log.Add(f0);
                     }
@@ -180,7 +180,7 @@ namespace postGAE
             }
             Console.ReadLine();
         }
-        public static bool posturl(string ds_n, string item, string get_url)
+        public static bool posturl(string ds_n, string item, string get_url,List<string> log)
         {
             Console.WriteLine(get_url);           
             string post_context = "";
@@ -207,7 +207,7 @@ namespace postGAE
                 reader.Close();
                 dataStream.Close();
                 response.Close();
-                Console.WriteLine(postgae(ds_n, item, post_context));
+                Console.WriteLine(postgae(ds_n, item, post_context,log));
             }
            catch(Exception exp){
                return false;
@@ -215,7 +215,7 @@ namespace postGAE
             return true;
 
         }
-        static string postgae(string ds_n,string item,string post_context)
+        static string postgae(string ds_n,string item,string post_context,List<string>log)
         {
             try
             {
@@ -235,7 +235,7 @@ namespace postGAE
                 dataStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(dataStream);
                 String responseformserver = reader.ReadToEnd();
-
+                if (responseformserver.Contains("succ")) log.Add("succ");
                 reader.Close();
                 dataStream.Close();
                 response.Close();
