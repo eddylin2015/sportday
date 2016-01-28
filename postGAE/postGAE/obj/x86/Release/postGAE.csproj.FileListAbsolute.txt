@@ -1,0 +1,5 @@
+C:\code\consoleapp\postGAE\postGAE\bin\Release\postGAE.exe
+C:\code\consoleapp\postGAE\postGAE\bin\Release\postGAE.pdb
+C:\code\consoleapp\postGAE\postGAE\obj\x86\Release\ResolveAssemblyReference.cache
+C:\code\consoleapp\postGAE\postGAE\obj\x86\Release\postGAE.exe
+C:\code\consoleapp\postGAE\postGAE\obj\x86\Release\postGAE.pdb

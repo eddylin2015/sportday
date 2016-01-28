@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>mppform</name>
+    </assembly>
+    <members>
+        <member name="T:MPPFORM.MsgBox">
+            <summary>
+            消息框(TextBox MultiLine)
+            </summary>
+        </member>
+        <member name="M:MPPFORM.MsgBox.#ctor(System.String[])">
+            <summary>
+            MsgBox構造
+            <example>
+            MsgBox msg=new MsgBox(LastError.GetArray());
+            MsgBox.ShowDialog();
+            </example>
+            </summary>
+            <param name="a_msg">String[] 消息內容 </param>
+        </member>
+        <member name="T:MPPFORM.NumericUpDownBox">
+            <summary>
+            數字選上下表單
+            </summary>
+        </member>
+        <member name="M:MPPFORM.NumericUpDownBox.#ctor(System.String,System.Int32)">
+            <summary>
+            構造
+            </summary>
+            <param name="TXT">表單標題</param>
+            <param name="num">預設數字</param>
+        </member>
+        <member name="P:MPPFORM.NumericUpDownBox.GetNum">
+            <summary>
+            返回數字
+            </summary>
+        </member>
+        <member name="T:MPPFORM.InputStrBox">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MPPFORM.InputStrBox.#ctor(System.String,System.String)">
+            <summary>
+            構造
+            </summary>
+            <param name="TXT">表單標題</param>
+            <param name="default_txt">default text</param>
+        </member>
+        <member name="P:MPPFORM.InputStrBox.textbox_str">
+            <summary>
+            返回文字
+            </summary>
+        </member>
+        <member name="T:MPPFORM.ListBoxForm">
+            <summary>
+            列表表單
+            </summary>
+        </member>
+        <member name="F:MPPFORM.ListBoxForm.lb">
+            <summary>
+            CheckedListBox
+            </summary>
+        </member>
+        <member name="M:MPPFORM.ListBoxForm.#ctor">
+            <summary>
+            構造
+            </summary>
+        </member>
+        <member name="T:MPPFORM.ListBoxFilterForm">
+            <summary>
+            過濾列表表單
+            </summary>
+        </member>
+        <member name="F:MPPFORM.ListBoxFilterForm.lb">
+            <summary>
+            CheckedListBox
+            </summary>
+        </member>
+        <member name="M:MPPFORM.ListBoxFilterForm.#ctor">
+            <summary>
+            構造
+            </summary>
+        </member>
+    </members>
+</doc>

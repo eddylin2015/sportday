@@ -1,0 +1,15 @@
+C:\Documents and Settings\user\Local Settings\Application Data\Temporary Projects\postGAE\bin\Debug\postGAE.exe
+C:\Documents and Settings\user\Local Settings\Application Data\Temporary Projects\postGAE\bin\Debug\postGAE.pdb
+C:\Documents and Settings\user\Local Settings\Application Data\Temporary Projects\postGAE\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\Local Settings\Application Data\Temporary Projects\postGAE\obj\x86\Debug\postGAE.exe
+C:\Documents and Settings\user\Local Settings\Application Data\Temporary Projects\postGAE\obj\x86\Debug\postGAE.pdb
+C:\code\consoleapp\postGAE\postGAE\obj\x86\Debug\postGAE.exe
+C:\code\consoleapp\postGAE\postGAE\obj\x86\Debug\postGAE.pdb
+C:\code\consoleapp\postGAE\postGAE\bin\Debug\postGAE.exe
+C:\code\consoleapp\postGAE\postGAE\bin\Debug\postGAE.pdb
+C:\code\consoleapp\postGAE\postGAE\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\code\SportDay\postGAE\postGAE\obj\x86\Debug\postGAE.exe
+C:\code\SportDay\postGAE\postGAE\obj\x86\Debug\postGAE.pdb
+C:\code\SportDay\postGAE\postGAE\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\code\SportDay\postGAE\postGAE\bin\Debug\postGAE.exe
+C:\code\SportDay\postGAE\postGAE\bin\Debug\postGAE.pdb

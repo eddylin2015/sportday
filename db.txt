@@ -1,0 +1,295 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.3
+-- http://www.phpmyadmin.net
+-- 
+-- 主機: localhost
+-- 建立日期: Jan 28, 2016, 05:54 AM
+-- 伺服器版本: 5.0.51
+-- PHP 版本: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- 資料庫: `sportday2015`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `field_gr`
+-- 
+
+CREATE TABLE `field_gr` (
+  `fi_id` int(11) NOT NULL,
+  `gr_rc` varchar(32) collate utf8_bin default NULL,
+  `name` varchar(32) collate utf8_bin default NULL,
+  `classno` varchar(32) collate utf8_bin default NULL,
+  `gr_period` varchar(32) collate utf8_bin default NULL,
+  `gr_date` varchar(32) collate utf8_bin default NULL,
+  `f_item` varchar(64) collate utf8_bin default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `field_gr_tb`
+-- 
+
+CREATE TABLE `field_gr_tb` (
+  `fi_id` int(11) NOT NULL,
+  `gr_rc` varchar(32) collate utf8_bin default NULL,
+  `name` varchar(32) collate utf8_bin default NULL,
+  `classno` varchar(32) collate utf8_bin default NULL,
+  `gr_period` varchar(32) collate utf8_bin default NULL,
+  `gr_date` varchar(32) collate utf8_bin default NULL,
+  `f_item` varchar(64) collate utf8_bin default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `field_item`
+-- 
+
+CREATE TABLE `field_item` (
+  `fi_id` int(11) default NULL,
+  `f_item` varchar(64) character set big5 collate big5_bin default NULL,
+  `filename` varchar(128) character set big5 collate big5_bin default NULL,
+  `rcx` varchar(8) collate utf8_bin default NULL,
+  `title` varchar(64) collate utf8_bin default NULL,
+  `gi` smallint(6) default NULL,
+  `lock_item` int(11) default NULL,
+  `lock_time` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `ds_n` varchar(3) collate utf8_bin NOT NULL,
+  `h1` decimal(4,2) default NULL,
+  `h2` decimal(4,2) default NULL,
+  `h3` decimal(4,2) default NULL,
+  `h4` decimal(4,2) default NULL,
+  `h5` decimal(4,2) default NULL,
+  `h6` decimal(4,2) default NULL,
+  `h7` decimal(4,2) default NULL,
+  `h8` decimal(4,2) default NULL,
+  `h9` decimal(4,2) default NULL,
+  `h10` decimal(4,2) default NULL,
+  `h11` decimal(4,2) default NULL,
+  `h12` decimal(4,2) default NULL,
+  `h13` decimal(4,2) default NULL,
+  `h14` decimal(4,2) default NULL,
+  `h15` decimal(4,2) default NULL,
+  `h16` decimal(4,2) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `field_rc`
+-- 
+
+CREATE TABLE `field_rc` (
+  `frc_id` int(11) NOT NULL auto_increment,
+  `fi_id` int(11) default NULL,
+  `rank` varchar(32) collate utf8_bin default NULL,
+  `group_id` varchar(32) collate utf8_bin default NULL,
+  `road` varchar(32) collate utf8_bin default NULL,
+  `s_number` varchar(32) collate utf8_bin default NULL,
+  `number` varchar(32) collate utf8_bin default NULL,
+  `classno` varchar(32) collate utf8_bin default NULL,
+  `name` varchar(32) collate utf8_bin default NULL,
+  `rc` varchar(32) character set big5 collate big5_bin default NULL,
+  `grk` varchar(32) character set big5 collate big5_bin default NULL,
+  `note` varchar(32) character set big5 collate big5_bin default NULL,
+  `RCX` varchar(3) character set big5 collate big5_bin default NULL,
+  `h1` varchar(8) collate utf8_bin default NULL,
+  `h2` varchar(8) collate utf8_bin default NULL,
+  `h3` varchar(8) collate utf8_bin default NULL,
+  `h4` varchar(8) collate utf8_bin default NULL,
+  `h5` varchar(8) collate utf8_bin default NULL,
+  `h6` varchar(8) collate utf8_bin default NULL,
+  `h7` varchar(8) collate utf8_bin default NULL,
+  `h8` varchar(8) collate utf8_bin default NULL,
+  `h9` varchar(8) collate utf8_bin default NULL,
+  `h10` varchar(8) collate utf8_bin default NULL,
+  `h11` varchar(8) collate utf8_bin default NULL,
+  `h12` varchar(8) collate utf8_bin default NULL,
+  `h13` varchar(8) collate utf8_bin default NULL,
+  `h14` varchar(8) collate utf8_bin default NULL,
+  `h15` varchar(8) collate utf8_bin default NULL,
+  `h16` varchar(8) collate utf8_bin default NULL,
+  `B3` varchar(8) collate utf8_bin default NULL,
+  `B5` varchar(8) collate utf8_bin default NULL,
+  `stud_ref` varchar(10) collate utf8_bin default NULL,
+  `gi` int(11) default NULL,
+  PRIMARY KEY  (`frc_id`),
+  UNIQUE KEY `si_id` (`fi_id`,`group_id`,`road`,`number`,`name`,`classno`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=329 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `group_type`
+-- 
+
+CREATE TABLE `group_type` (
+  `gt` varchar(4) default NULL,
+  `year0` int(4) default NULL,
+  `year1` int(4) default NULL,
+  `gtd` varchar(4) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `gt_item`
+-- 
+
+CREATE TABLE `gt_item` (
+  `gi` int(2) NOT NULL default '0',
+  `gt` varchar(4) default NULL,
+  `ite` varchar(10) default NULL,
+  `gid` varchar(32) default NULL,
+  `max_a` int(11) default NULL,
+  `gr_rc` varchar(32) default NULL,
+  `name` varchar(32) default NULL,
+  `classno` varchar(32) default NULL,
+  `gr_period` varchar(32) default NULL,
+  `gr_date` varchar(32) default NULL,
+  PRIMARY KEY  (`gi`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `item_type`
+-- 
+
+CREATE TABLE `item_type` (
+  `ite` varchar(10) default NULL,
+  `item_type` varchar(16) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `sport_gr`
+-- 
+
+CREATE TABLE `sport_gr` (
+  `si_id` int(11) NOT NULL,
+  `gr_rc` varchar(32) collate utf8_bin default NULL,
+  `name` varchar(32) collate utf8_bin default NULL,
+  `classno` varchar(32) collate utf8_bin default NULL,
+  `gr_period` varchar(32) collate utf8_bin default NULL,
+  `gr_date` varchar(32) collate utf8_bin default NULL,
+  `s_item` varchar(64) collate utf8_bin default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `sport_gr2014`
+-- 
+
+CREATE TABLE `sport_gr2014` (
+  `si_id` int(11) NOT NULL,
+  `gr_rc` varchar(32) collate utf8_bin default NULL,
+  `name` varchar(32) collate utf8_bin default NULL,
+  `classno` varchar(32) collate utf8_bin default NULL,
+  `gr_period` varchar(32) collate utf8_bin default NULL,
+  `gr_date` varchar(32) collate utf8_bin default NULL,
+  `s_item` varchar(64) collate utf8_bin default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `sport_gr_tb`
+-- 
+
+CREATE TABLE `sport_gr_tb` (
+  `si_id` int(11) NOT NULL,
+  `gr_rc` varchar(32) collate utf8_bin default NULL,
+  `name` varchar(32) collate utf8_bin default NULL,
+  `classno` varchar(32) collate utf8_bin default NULL,
+  `gr_period` varchar(32) collate utf8_bin default NULL,
+  `gr_date` varchar(32) collate utf8_bin default NULL,
+  `s_item` varchar(64) collate utf8_bin default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `sport_item`
+-- 
+
+CREATE TABLE `sport_item` (
+  `si_id` int(11) default NULL,
+  `s_item` varchar(64) character set big5 collate big5_bin default NULL,
+  `filename` varchar(128) character set big5 collate big5_bin default NULL,
+  `rcx` varchar(8) collate utf8_bin default NULL,
+  `title` varchar(64) collate utf8_bin default NULL,
+  `gi` smallint(6) default NULL,
+  `lock_item` int(11) default NULL,
+  `lock_time` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `ds_n` varchar(3) collate utf8_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `sport_rc`
+-- 
+
+CREATE TABLE `sport_rc` (
+  `rc_id` int(11) NOT NULL auto_increment,
+  `si_id` int(11) default NULL,
+  `rank` varchar(32) character set big5 collate big5_bin default NULL,
+  `group_id` varchar(32) character set big5 collate big5_bin default NULL,
+  `road` varchar(32) character set big5 collate big5_bin default NULL,
+  `s_number` varchar(32) character set big5 collate big5_bin default NULL,
+  `number` varchar(32) character set big5 collate big5_bin default NULL,
+  `classno` varchar(32) collate utf8_bin default NULL,
+  `name` varchar(32) collate utf8_bin default NULL,
+  `rc` varchar(32) character set big5 collate big5_bin default NULL,
+  `grk` varchar(32) character set big5 collate big5_bin default NULL,
+  `note` varchar(32) character set big5 collate big5_bin default NULL,
+  `RCX` varchar(3) character set big5 collate big5_bin default NULL,
+  `stud_ref` varchar(10) collate utf8_bin default NULL,
+  `gi` int(11) default NULL,
+  PRIMARY KEY  (`rc_id`),
+  UNIQUE KEY `si_id` (`si_id`,`group_id`,`road`,`number`,`name`,`classno`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1171 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `student`
+-- 
+
+CREATE TABLE `student` (
+  `stud_ref` varchar(10) default NULL,
+  `code` varchar(10) default NULL,
+  `name_c` varchar(16) character set utf8 collate utf8_bin default NULL,
+  `name_p` varchar(16) default NULL,
+  `sex` varchar(1) default NULL,
+  `byear` int(4) default NULL,
+  `grade` varchar(3) default NULL,
+  `classno` varchar(2) default NULL,
+  `c_no` int(2) default NULL,
+  `gt` varchar(2) default NULL,
+  `number` varchar(6) default NULL,
+  `seed` int(1) default NULL,
+  `logdatetime` varchar(19) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `stud_gti`
+-- 
+
+CREATE TABLE `stud_gti` (
+  `stud_ref` varchar(10) default NULL,
+  `gi` int(11) default NULL,
+  `reg` int(1) default NULL,
+  UNIQUE KEY `stud_ref` (`stud_ref`,`gi`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

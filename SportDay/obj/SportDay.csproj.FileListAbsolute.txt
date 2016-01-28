@@ -1,0 +1,9 @@
+C:\code\SportDay\SportDay\bin\Debug\SportDay.exe
+C:\code\SportDay\SportDay\bin\Debug\SportDay.pdb
+C:\code\SportDay\SportDay\obj\Debug\ResolveAssemblyReference.cache
+C:\code\SportDay\SportDay\obj\Debug\SportDay.MainForm.resources
+C:\code\SportDay\SportDay\obj\Debug\SportDay.Properties.Resources.resources
+C:\code\SportDay\SportDay\obj\Debug\SportDay.csproj.GenerateResource.Cache
+C:\code\SportDay\SportDay\obj\Debug\SportDay.exe
+C:\code\SportDay\SportDay\obj\Debug\SportDay.pdb
+C:\code\SportDay\SportDay\obj\Debug\SportDay.FormGirdPanel.resources

@@ -1,0 +1,7 @@
+output_result_html=C:\AppServ\www\output_result_html\files
+DB_HOST=127.0.0.1
+#no used db_host, replace c:\code\config\sportday_dbconnection_str.txt
+report_to_public=C:\AppServ\www\report_to_public\files
+blanktable_to_public=C:\AppServ\www\boardfile
+#temp_dir=C:\AppServ\www\temp\files
+temp_dir=C:\code\SportDay\SportDay\bin\Debug\temp
